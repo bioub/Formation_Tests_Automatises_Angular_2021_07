@@ -1,0 +1,8 @@
+<form class="form-inline" (submit)="addTodo()">
+  <div class="form-group mb-0">
+    <label class="sr-only">Todo</label>
+    <input [(ngModel)]="todo" class="form-control" name="todo"
+      placement="bottom">
+  </div>
+  <button type="submit" class="btn btn-primary">+</button>
+</form>

@@ -1,0 +1,20 @@
+<form [ngClass]="{submitted: userForm.submitted}"
+      (submit)="userForm.valid && adduser()"
+      #userForm="ngForm">
+  <div class="form-group">
+    <label>{{'Name' | translate}}</label>
+    <input class="form-control" name="name" required [(ngModel)]="user.name" #name="ngModel" [ngClass]="{'is-invalid': name.invalid && (name.touched || userForm.submitted)}">
+    <div class="invalid-feedback" *ngIf="name.invalid && (name.touched || userForm.submitted)">
+      {{'Name is required' | translate}}
+    </div>
+  </div>
+  <div class="form-group">
+    <label>{{'Email' | translate}}</label>
+    <input type="email" class="form-control" name="email" [(ngModel)]="user.email">
+  </div>
+  <div class="form-group">
+    <label>{{'Phone' | translate}}</label>
+    <input type="tel" class="form-control" name="phone" [(ngModel)]="user.phone">
+  </div>
+  <button type="submit" class="btn btn-primary">{{'Add' | translate}}</button>
+</form>

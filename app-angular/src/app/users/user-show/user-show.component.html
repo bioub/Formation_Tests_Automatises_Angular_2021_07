@@ -1,0 +1,12 @@
+<h5>{{'Name' | translate}}</h5>
+<p>{{user?.name}}</p>
+
+<ng-container *ngIf="user?.email">
+  <h5>{{'Email' | translate}}</h5>
+  <p>{{user?.email}}</p>
+</ng-container>
+
+<ng-container *ngIf="user?.phone">
+  <h5>{{'Phone' | translate}}</h5>
+  <p>{{user?.phone}}</p>
+</ng-container>
