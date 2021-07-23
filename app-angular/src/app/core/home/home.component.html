@@ -1,3 +1,11 @@
 <p>
   Welcome
 </p>
+
+<h2>Demo Select</h2>
+<!-- <app-select [values]="['A', 'B', 'C']" [selected]="selectedLetter" (selectedChange)="selectedLetter = $event"></app-select> -->
+<app-select [values]="['A', 'B', 'C']" [(selected)]="selectedLetter"></app-select>
+
+<p>
+  Vous avez sélectionné : {{ selectedLetter }}
+</p>
