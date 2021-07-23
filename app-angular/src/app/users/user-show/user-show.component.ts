@@ -27,6 +27,8 @@ export class UserShowComponent implements OnInit {
       .subscribe((user: User) => {
         this.user = user;
       });
+
+
   }
 
 }
