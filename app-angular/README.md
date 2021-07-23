@@ -21,3 +21,7 @@ Recréer les fonctions beforeAll et afterAll qui font échouer les tests si prob
 Si nécessaire transformer le beforeEach qui compile le composant à tester avec async/await (de temps en temps remplacer la fonction async(), par async / await, ou sinon rajouter await)
 
 En utilisant les sections declarations et imports faites passer les tests.
+
+## Test de Input/Output
+
+Tester l'input de TodoItem et l'ouput de TodoForm
