@@ -13,7 +13,6 @@ export class TodosListComponent implements DoCheck {
   constructor() { }
 
   ngDoCheck(): void {
-    console.log('ListComponent checked');
   }
 
 }

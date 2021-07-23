@@ -11,7 +11,6 @@ export class TodoItemComponent implements DoCheck {
   public todo: string;
 
   ngDoCheck(): void {
-    console.log('ItemComponent checked');
   }
 
 }

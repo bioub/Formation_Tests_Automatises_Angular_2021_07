@@ -11,14 +11,14 @@ export class MenuComponent implements OnInit {
   public open = false;
   public lang = 'en';
 
-  constructor(private translateService: TranslateService) { }
+  // constructor(private translateService: TranslateService) { }
 
   ngOnInit() {
   }
 
   switchLang() {
     this.lang = this.lang === 'en' ? 'fr' : 'en';
-    this.translateService.use(this.lang);
+    // this.translateService.use(this.lang);
   }
 
 }

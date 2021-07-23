@@ -8,9 +8,9 @@
         {{c.name}}
       </a>
       <li class="list-group-item text-center">
-        {{(users$ | async)?.length}} {{'users' | translate}}
+        {{(users$ | async)?.length}} users
       </li>
-      <a class="btn btn-primary btn-block mt-3" [routerLink]="['add']">{{'Add' | translate}}</a>
+      <a class="btn btn-primary btn-block mt-3" [routerLink]="['add']">Add</a>
     </div>
   </div>
   <div class="col-md">

@@ -5,12 +5,24 @@ import { TodoItemComponent } from './todo-item.component';
 describe('TodoItemComponent', () => {
   let component: TodoItemComponent;
   let fixture: ComponentFixture<TodoItemComponent>;
+  let originalConsoleError!: any;
+
+  beforeAll(() => {
+    originalConsoleError = console.error;
+    console.error = function (message?: any, ...optionalParams: any[]): void {
+      const params = optionalParams ? `\nParams: ${optionalParams}` : '';
+      fail(`Test contained console error:\n${message}${params}`);
+    };
+  });
+
+  afterAll(() => {
+    console.error = originalConsoleError;
+  });
 
   beforeEach(async () => {
-    TestBed.configureTestingModule({
-      declarations: [ TodoItemComponent ]
-    })
-    .compileComponents();
+    await TestBed.configureTestingModule({
+      declarations: [TodoItemComponent],
+    }).compileComponents();
   });
 
   beforeEach(() => {
@@ -30,4 +42,3 @@ describe('TodoItemComponent', () => {
     expect(nativeElement.textContent).toContain('Acheter du pain');
   });
 });
-

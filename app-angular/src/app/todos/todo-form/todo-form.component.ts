@@ -16,7 +16,7 @@ export class TodoFormComponent implements DoCheck {
   }
 
   ngDoCheck(): void {
-    console.log('FormComponent checked');
+    // console.log('FormComponent checked');
   }
 
 }
